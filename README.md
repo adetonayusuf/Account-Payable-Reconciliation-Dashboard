@@ -230,15 +230,15 @@ ap-reconciliation-dashboard/
 
 | Executive Summary | Exception Analysis |
 |---|---|
-| ![P1](screenshots/p1-exec-summary.png) | ![P2](screenshots/p2-exception-analysis.png) |
+| ![P1](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Executive%20summary.png) | ![P2](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Exception%20Analysis.png) |
 
 | Supplier Risk | Three-Way Match |
 |---|---|
-| ![P3](screenshots/p3-supplier-risk.png) | ![P4](screenshots/p4-three-way-match.png) |
+| ![P3](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Supplier%20Risk.png) | ![P4](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Three-Way%20Matching.png) |
 
 | Invoice Ageing | Drill-Through |
 |---|---|
-| ![P5](screenshots/p5-invoice-ageing.png) | ![P6](screenshots/p6-drill-through.png) |
+| ![P5](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Aging.png) | ![P6](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Details.png) |
 
 ---
 
@@ -267,7 +267,7 @@ Senior Accountant / Business Intelligence Analyst
 - 10+ years across financial reporting, treasury management, and data engineering
 - Lagos, Nigeria
 
-[LinkedIn →](https://www.linkedin.com/in/your-handle) · [Other projects →](https://github.com/your-username)
+[LinkedIn →](https://www.linkedin.com/in/yusuf-adetona/?isSelfProfile=true) · [Other projects →](https://github.com/adetonayusuf)
 
 ---
 
