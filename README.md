@@ -17,6 +17,22 @@ This project builds that reconciliation layer from the ground up.
 
 ---
 
+## Dashboard Preview
+
+| Executive Summary | Exception Analysis |
+|---|---|
+| ![Executive Summary](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Executive%20summary.png) | ![Exception Analysis](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Exception%20Analysis.png) |
+
+| Supplier Risk | Three-Way Match |
+|---|---|
+| ![Supplier Risk](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Supplier%20Risk.png) | ![Three-Way Match](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Three-Way%20Matching.png) |
+
+| Invoice Ageing | Invoice Detail (Drill-Through) |
+|---|---|
+| ![Invoice Ageing](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Aging.png) | ![Invoice Detail](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Details.png) |
+
+---
+
 ## What Was Built
 
 A fully automated data pipeline feeds a PostgreSQL analytical database, which powers a six-page Power BI report covering **$193.5 billion in invoiced value** across 802 suppliers.
@@ -107,6 +123,8 @@ Oldest Outstanding         180+ days
 
 The Power BI model follows a **star schema** with `reconciliation_results` as the central fact table. Every dashboard page filters through this hub; the reporting views sit in a dedicated bottom lane with no cross-relationships.
 
+![Data Model](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Data%20Model.png)
+
 **Relationship pattern:**
 ```
 Dim_Date ──────────────────────────────────── 1:M ──► reconciliation_results
@@ -168,12 +186,20 @@ In this dataset: **Gallegos-Nash** leads with a 39.4% adjusted exception rate ac
 
 ## Getting Started
 
+**To explore the dashboard:**
+
+1. Browse the [dashboard screenshots](#dashboard-preview) above for a full page-by-page walkthrough.
+2. The `.pbix` file and full pipeline code (`pipeline/`, `sql/`) are being prepared for upload.
+3. Connect via [LinkedIn](https://www.linkedin.com/in/yusuf-adetona/) to request early access or discuss the project.
+
+**To reproduce the pipeline** (once code files are published):
+
 **Prerequisites:** Python 3.9+, PostgreSQL 14+, Power BI Desktop (free)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com//ap-reconciliation-dashboard.git
-cd ap-reconciliation-dashboard
+git clone https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard.git
+cd Account-Payable-Reconciliation-Dashboard
 
 # 2. Install Python dependencies
 pip install -r requirements.txt
@@ -198,47 +224,21 @@ python pipeline/load_data.py        # loads into PostgreSQL
 ## Repository Structure
 
 ```
-ap-reconciliation-dashboard/
+Account-Payable-Reconciliation-Dashboard/
 │
-├── pipeline/
-│   ├── generate_data.py          # Synthetic AP dataset — invoices, POs, GRNs,
-│   │                             #   exceptions, suppliers, payments
-│   └── load_data.py              # PostgreSQL connection + bulk loader
-│
-├── sql/
-│   ├── 01_create_tables.sql      # DDL for all raw tables
-│   └── 02_create_views.sql       # 6 analytical views for Power BI
-│
-├── powerbi/
-│   └── AP Reconciliation Dashboard.pbix
-│
-├── screenshots/
-│   ├── p1-exec-summary.png
-│   ├── p2-exception-analysis.png
-│   ├── p3-supplier-risk.png
-│   ├── p4-three-way-match.png
-│   ├── p5-invoice-ageing.png
-│   └── p6-drill-through.png
-│
-├── requirements.txt
+├── Executive summary.png           # P1 — Executive Summary dashboard
+├── Exception Analysis.png          # P2 — Exception Analysis dashboard
+├── Supplier Risk.png               # P3 — Supplier Risk dashboard
+├── Three-Way Matching.png          # P4 — Three-Way Match dashboard
+├── Invoice Aging.png               # P5 — Invoice Ageing dashboard
+├── Invoice Details.png             # P6 — Drill-Through (Invoice Detail)
+├── Data Model.png                  # Power BI star schema — model view
 └── README.md
 ```
 
+> **Coming soon:** `pipeline/generate_data.py`, `pipeline/load_data.py`, `sql/01_create_tables.sql`, `sql/02_create_views.sql`, `AP Reconciliation Dashboard.pbix`, and `requirements.txt`. Connect via [LinkedIn](https://www.linkedin.com/in/yusuf-adetona/) to be notified on publish.
+
 ---
-
-## Screenshots
-
-| Executive Summary | Exception Analysis |
-|---|---|
-| ![P1](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Executive%20summary.png) | ![P2](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Exception%20Analysis.png) |
-
-| Supplier Risk | Three-Way Match |
-|---|---|
-| ![P3](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Supplier%20Risk.png) | ![P4](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Three-Way%20Matching.png) |
-
-| Invoice Ageing | Drill-Through |
-|---|---|
-| ![P5](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Aging.png) | ![P6](https://github.com/adetonayusuf/Account-Payable-Reconciliation-Dashboard/blob/main/Invoice%20Details.png) |
 
 ---
 
@@ -267,7 +267,7 @@ Senior Accountant / Business Intelligence Analyst
 - 10+ years across financial reporting, treasury management, and data engineering
 - Lagos, Nigeria
 
-[LinkedIn →](https://www.linkedin.com/in/yusuf-adetona/?isSelfProfile=true) · [Other projects →](https://github.com/adetonayusuf)
+[LinkedIn →](https://www.linkedin.com/in/adetona-yusuf) · [GitHub →](https://github.com/adetonayusuf)
 
 ---
 
